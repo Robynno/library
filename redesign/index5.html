@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>New Margaret E. Heggan Free Public Library</title>
+  <!-- Bootstrap CSS (Bootstrap 5) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="twice.css" />
+</head>
+<body>
+
+  <!-- HEADER SECTION -->
+  <header>
+    <!-- Top Bar erghhh  -->
+    <div class="top-bar">
+      <div class="top-left">
+        <!-- Logo/Tagline -->
+        <img src="imgs/Tree Key.png" alt="Library Logo" class="logo" />
+        <span class="tagline">Connect Discover Grow</span>
+      </div>
+      <div class="top-right">
+        <h1>Margaret E. Heggan Free Public Library</h1>
+        <!-- Language Selector other langs? -->
+        <div class="language-selector">
+          <select>
+            <option>English</option>
+            <option>Spanish</option>
+            <option>French</option>
+          </select>
+        </div>
+        <!-- Hamburger Menu Does it need to work for full functionality?  -->
+        <button class="hamburger-menu" aria-label="Menu">
+          <span> </span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Main Navigation / Search -->
+    <nav class="main-nav">
+      <div class="search-container">
+        <input type="text" placeholder="Search Our Catalog" aria-label="Search Catalog" />
+        <button type="button" class="search-btn" aria-label="Search">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Section Header -->
+  <div class="welcome-text">
+    Welcome to the Margaret E. Heggan Free Public Library, serving the residents of 
+    Washington Township, New Jersey Since 1966
+  </div>
+
+  <!-- MAIN CONTENT SECTION -->
+  <main>
+    <!--  -->
+       <!-- Library Hours secton -->
+   <div class="library-hours-bar">
+    <p>
+      Library Hours 
+      <button class="dropdown-icon" onclick="toggleDropdown()" aria-label="Toggle Library Hours">
+        &#9662;
+      </button>
+    </p>
+  </div>
+  
+  <div id="library-hours-dropdown" class="dropdown-content">
+    <p>Monday - Friday: 9 AM - 5 PM</p>
+    <p>Saturday: 10 AM - 2 PM</p>
+    <p>Sunday: Closed</p>
+    <script src="script.js"></script>
+
+  </div>
+  <!-- END lib hours section -->
+
+    <!--  -->
+    <!-- Nav tabs (Red Bar) -->
+    <nav>
+      <div class="nav nav-tabs red-bar" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active" id="nav-events-tab" data-bs-toggle="tab" href="#nav-events" role="tab" aria-controls="nav-events" aria-selected="true">
+          This Weeks events
+        </a>
+        <a class="nav-item nav-link" id="nav-news-tab" data-bs-toggle="tab" href="#nav-news" role="tab" aria-controls="nav-news" aria-selected="false">
+          Library news
+        </a>
+      </div>
+    </nav>
+
+    <!-- Tab content -->
+    <div class="tab-content" id="nav-tabContent">
+      <!-- "This Weeks events" Tab Pane with Carousel -->
+      <div class="tab-pane fade show active" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab">
+        <div id="eventsCarousel" class="carousel slide" data-bs-interval="false">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#eventsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#eventsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <!-- First Slide: Three Cards Centered -->
+            <div class="carousel-item active">
+              <div class="card-container">
+                <div class="row justify-content-center">
+                  <!-- Card 1 -->
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="imgs/teen photography club.jpg" class="card-img-top" alt="Event 1">
+                      <div class="card-body">
+                        <h5 class="card-title">Teen Photography</h5>
+                        <p class="card-text">Monday, March 24 at 4:00 PM in the Meeting Room</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 2 -->
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="imgs/goose.png" class="card-img-top" alt="Event 2">
+                      <div class="card-body">
+                        <h5 class="card-title">Mother Goose on the Loose</h5>
+                        <p class="card-text">Tuesday, March 25 at 10:15 AM in the Storyroom</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 3 -->
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="imgs/wiggle worm.png" class="card-img-top" alt="Event 3">
+                      <div class="card-body">
+                        <h5 class="card-title">Wiggle Worms</h5>
+                        <p class="card-text">Tuesday, March 25 at 11:00 AM in the Meeting Room</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Second Slide set  -->
+            <div class="carousel-item">
+              <div class="card-container">
+                <div class="row justify-content-center">
+                  <!-- Card 4 -->
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="imgs/libby.jpg" class="card-img-top" alt="Event 4">
+                      <div class="card-body">
+                        <h5 class="card-title">Libby App Training</h5>
+                        <p class="card-text">Tuesday, March 25 at 6:30 PM in the Meeting Room</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 5 -->
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="imgs/steam and go kit.jpg" class="card-img-top" alt="Event Card 5">
+                      <div class="card-body">
+                        <h5 class="card-title">S.T.E.A.M. on the Kit</h5>
+                        <p class="card-text">Monday, March 24 at 12:00 AM in the Children's Library</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card 6 -->
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="imgs/yoga.png" class="card-img-top" alt="Event Card 6">
+                      <div class="card-body">
+                        <h5 class="card-title">Chair Yoga with Dona</h5>
+                        <p class="card-text">Sunday, March 23 at 1:30 PM in the Meeting Room</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Carousel Controls  -->
+          <button class="carousel-control-prev custom-prev" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next custom-next" type="button" data-bs-target="#eventsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Library news Tab Pane with Carousel -->
+      <div class="tab-pane fade" id="nav-news" role="tabpanel" aria-labelledby="nav-news-tab">
+        <div id="newsCarousel" class="carousel slide" data-bs-interval="false">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <!-- First Slide: Three News Cards Centered -->
+            <div class="carousel-item active">
+              <div class="card-container">
+                <div class="row justify-content-center">
+                  <!-- News Card 1 -->
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="imgs/large books.jpg" class="card-img-top" alt="News 1">
+                      <div class="card-body">
+                        <h5 class="card-title">New Large Print Books</h5>
+                        <p class="card-text">We purchased 60 new large print adult books </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- News Card 2 -->
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="imgs/maker's day.png" class="card-img-top" alt="News 2">
+                      <div class="card-body">
+                        <h5 class="card-title">Maker's Day</h5>
+                        <p class="card-text">Join us for New Jersey Makers Day this Saturday, March 22nd!
+                            We'll have sessions for all ages where you can visit us.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- News Card 3 -->
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="imgs/take share.png" class="card-img-top" alt="News 3">
+                      <div class="card-body">
+                        <h5 class="card-title">Take and Share</h5>
+                        <p class="card-text">One of our 2025 strategic planning goals is to conduct more outreach to Washington Township residents.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Second Slide set  -->
+            <div class="carousel-item">
+              <div class="card-container">
+                <div class="row justify-content-center">
+                  <!-- News Card 4 -->
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="imgs/Fam game time.jpg" class="card-img-top" alt="News 4">
+                      <div class="card-body">
+                        <h5 class="card-title">Family storytime</h5>
+                        <p class="card-text">oin us for an all-ages storytime featuring family-friendly stories, songs, and fun! To celebrate Women's History Month</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- News Card 5 -->
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="imgs/concertiste.jpg" class="card-img-top" alt="News 5">
+                      <div class="card-body">
+                        <h5 class="card-title">Martin Concert</h5>
+                        <p class="card-text">Join us for the first of our bi-monthly concert series!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- News Card 6 -->
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="imgs/game night.jpg" class="card-img-top" alt="News 6">
+                      <div class="card-body">
+                        <h5 class="card-title">TAB Game TIme</h5>
+                        <p class="card-text">It's GAME TIME! From board games to building challenges, from trivia to LEGO free plays, from cards to online!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Carousel Controls made outside area  -->
+          <button class="carousel-control-prev custom-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next custom-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Top Picks selection -->
+<section class="red-bar-carousel">
+    <div class="container-fluid">
+      <div class="library-hours-bar">
+        <h2 class="red-bar">Top Picks</h2>
+      </div>
+      <div id="featuredCarousel" class="carousel slide" data-bs-interval="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <!-- First Slide: Three Cards Centered -->
+          <div class="carousel-item active">
+            <div class="card-container">
+              <div class="row justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="imgs/Book 1.jpeg" class="card-img-top" alt="Featured 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Goodbye Winter, Hello Spring</h5>
+                      <p class="card-text">Kenard Pak</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="imgs/book 2.jpeg" class="card-img-top" alt="Featured 2">
+                    <div class="card-body">
+                      <h5 class="card-title">A Whole Song and Dance</h5>
+                      <p class="card-text">Sarvenaz Tash</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="imgs/book 3.jpeg" class="card-img-top" alt="Featured 3">
+                    <div class="card-body">
+                      <h5 class="card-title">The Invisible Life of Addie Larue</h5>
+                      <p class="card-text">V.E. Schwab</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Second Slide: Next Set of Three Cards Centered -->
+          <div class="carousel-item">
+            <div class="card-container">
+              <div class="row justify-content-center">
+                <!-- Card 4 -->
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="imgs/book 4.jpeg" class="card-img-top" alt="Featured 4">
+                    <div class="card-body">
+                      <h5 class="card-title">Brooklyn A Novel</h5>
+                      <p class="card-text">Colm Toibin</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="imgs/book 5.jpeg" class="card-img-top" alt="Featured 5">
+                    <div class="card-body">
+                      <h5 class="card-title">A Novel Love Story</h5>
+                      <p class="card-text">Ashley Poston</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="imgs/book 6.jpeg" class="card-img-top" alt="Featured 6">
+                    <div class="card-body">
+                      <h5 class="card-title">Station Eleven</h5>
+                      <p class="card-text">Emily St. John Mandel</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel Controls for Featured Carousel -->
+        <button class="carousel-control-prev custom-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next custom-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Bootstrap Bundle with Popper (Bootstrap 5 JS) aparently needed  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

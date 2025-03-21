@@ -1,0 +1,281 @@
+/* Basic Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  width: 100%;
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #95032c;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.tagline {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Right side: Library Name, Language Selector, Hamburger */
+.top-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.top-right h1 {
+  font-size: 1.1rem;
+  margin-right: 20px;
+  font-weight: normal;
+}
+
+.language-selector select {
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+}
+
+/* Main Navigation */
+.main-nav {
+  background-color: #95032c;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.search-container input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+}
+.search-btn {
+  background: #fff;
+  color: #95032c;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Welcome Text */
+.welcome-text {
+  background-color: #fff;
+  color: #a0062f;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* ---------------- MAIN CONTENT ---------------- */
+
+/* LIB Hours Section  */
+.library-hours-bar {
+    background-color: #95032c; /* Red background */
+    color: #fff;               /* White text */
+    text-align: center;
+    padding: 10px;
+    font-size: larger;
+  }
+  
+  .library-hours-bar p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style the dropdown icon as a button */
+  .dropdown-icon {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem; /* Adjust icon size as needed */
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  /* Dropdown content hidden by default */
+  .dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+
+/* Lib Hours Section */
+.red-bar {
+  background-color: #95032c;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: larger;
+}
+.red-bar .nav-link {
+  color: #fff;
+  font-weight: bold;
+  padding: 15px;
+}
+.red-bar .nav-link.active {
+  background-color: #B30000;
+  color: #fff;
+}
+
+/* New container to center the cards */
+/* Ensure the card container is responsive and clips overflow */
+.card-container {
+    width: 100%;
+    max-width: 900px; /* Use your design’s max width */
+    margin: 0 auto;
+    overflow: hidden;  /* Hide any overflow from swiping */
+  }
+  
+  /* Adjust for smaller screens */
+  @media (max-width: 768px) {
+    .card-container {
+      max-width: 100%;
+      padding: 0 10px; /* Optional: add horizontal padding */
+    }
+  }
+  
+  /* Ensure the carousel-inner also hides overflow */
+  .carousel-inner {
+    overflow: hidden;
+  }
+  
+  /* Arrow Controls (keep as-is if you already positioned them) */
+  .carousel-control-prev.custom-prev,
+  .carousel-control-next.custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+  }
+  
+  .carousel-control-prev.custom-prev {
+    left: calc((100% - 900px) / 2 - 40px);  /* Adjust offset if needed */
+  }
+  
+  .carousel-control-next.custom-next {
+    right: calc((100% - 900px) / 2 - 40px);
+  }
+  
+  /* Arrow icon sizing (optional) */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    filter: invert(1);
+  }
+  
+
+/* Card Styling */
+.card {
+  background-color: #fff;
+  width: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: left;
+  padding: 20px;
+}
+.card {
+    width: 280px;       /* fixed width */
+    height: 400px;      /* fixed height */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;   /* Ensures content doesn't spill over */
+  }
+  
+  .card-img-top {
+    height: 180px;      /* fixed height for image */
+    object-fit: cover;  /* crop the image if needed */
+    width: 100%;
+  }
+  
+  .card-body {
+    flex: 1;            /* takes up remaining space */
+    overflow: hidden;   /* hides any excess text */
+  }
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background-color: #9B1C2E;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .top-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav {
+    padding: 10px;
+  }
+  .card-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
